@@ -1,3 +1,9 @@
+import logging
+
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
 class PositionManager:
     def check_exposure(self):
         """实时风险暴露检查"""
@@ -8,5 +14,5 @@ class PositionManager:
 
     def trigger_risk_control(self):
         """自动风控措施"""
-        self.logger.critical("触发风险控制机制！")
-        self.emergency_close_all()
+        logging.critical("触发风险控制机制！")
+        # self.emergency_close_all()
