@@ -1,0 +1,39 @@
+# config.yaml 示例
+pairs:
+  - paradex_symbol: BTC-USD-PERP  #代币种类
+    edgex_symbol: 10000001  #代币种类
+    paradex_leverage: 20  #杠杆倍数
+    edgex_leverage: 20    #杠杆倍数
+    base_amount: 100     # 基础交易金额(USD)
+    max_price_deviation: 1  #差价金额
+
+  - paradex_symbol: ETH-USD-PERP #代币种类
+    edgex_symbol: 10000002      #代币种类
+    paradex_leverage: 20  #杠杆倍数
+    edgex_leverage: 20    #杠杆倍数
+    base_amount: 100      # 基础交易金额(USD)
+    max_price_deviation: 0 #差价金额
+
+execution:
+  total_rounds: 100 #刷量次数
+  intra_round_delay: [5, 10]  # 秒
+  inter_round_delay: [20, 100] # 秒
+
+accounts:
+  paradex:
+    PARADEX_ACCOUNT: 1
+    PARADEX_ACCOUNT_PRIVATE_KEY: 1
+
+  edgex:
+    - api_key: "ek1"
+      api_secret: "es1"
+    - api_key: "ek2"
+      api_secret: "es2"
+
+
+paradex:
+  symbol: BTC-USD-PERP
+  url: https://api.testnet.paradex.trade/v1
+edgex:
+  symbol: 10000001
+  url: https://pro.edgex.exchange
